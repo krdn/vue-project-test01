@@ -1,0 +1,100 @@
+.row-span {
+  background-color: #ffffff;
+  border-right: var(--ag-row-border-width) var(--ag-row-border-style) var(--ag-row-border-color) !important;
+  border-bottom: var(--ag-row-border-width) var(--ag-row-border-style) var(--ag-row-border-color) !important;
+
+  &.ag-cell-focus:not(.ag-cell-range-selected):focus-within {
+    border-right: var(--ag-row-border-width) var(--ag-row-border-style)
+      var(--ag-range-selection-border-color) !important;
+    border-bottom: var(--ag-row-border-width) var(--ag-row-border-style)
+      var(--ag-range-selection-border-color) !important;
+  }
+}
+
+.ag-header-cell:not(:last-child) {
+  border-right: 1px solid #dde2eb;
+}
+
+.ag-ltr {
+  .ag-cell:not(:last-child) {
+    --ag-cell-horizontal-border: solid #dde2eb;
+  }
+}
+
+.ag-cell {
+  &.icon-cell {
+    svg:hover {
+      * {
+        fill: #2d8bff;
+        stroke: white;
+      }
+    }
+  }
+}
+
+.ag-header-cell {
+  &.header-text-center {
+    .ag-header-cell-label {
+      justify-content: center;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Scroll Style
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar {
+  width: 12px;
+  min-width: 12px;
+  max-width: 12px;
+  border-left: 1px solid #dde2eb;
+}
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+  height: 100%;
+}
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: #bcbfc4;
+  border-radius: 6px;
+}
+
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar {
+  height: 12px;
+  min-height: 12px;
+  max-height: 12px;
+  border-top: 1px solid #dde2eb;
+}
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: #dde2eb;
+  border-radius: 6px;
+}
+
+.xai-1 {
+  background-color: #28df99;
+  opacity: 1;
+}
+
+.xai-2 {
+  background-color: #28df99;
+  opacity: 0.7;
+}
+
+.xai-3 {
+  background-color: #28df99;
+  opacity: 0.6;
+}
+
+.xai-4 {
+  background-color: #28df99;
+  opacity: 0.4;
+}
+
+.xai-5 {
+  background-color: #28df99;
+  opacity: 0.2;
+}

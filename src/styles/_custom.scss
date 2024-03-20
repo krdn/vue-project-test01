@@ -1,0 +1,185 @@
+.btn {
+  --cui-btn-padding-x: 6px;
+  --cui-btn-padding-y: 0;
+  --cui-btn-raddius: 2px;
+  --cui-btn-font-size: 14px;
+  --cui-btn-line-height: 31px;
+}
+
+/* modal창의 취소, 확인 버튼에 적용 */
+.btn-lg {
+  --cui-btn-padding-x: 30px;
+}
+
+/* search, refresh 버튼에 적용 */
+.btn-sm {
+  --cui-btn-padding-x: 3px;
+  --cui-btn-width: 33px;
+}
+
+/* calendar(date-picker)today, cancle, ok, 검색조건 버튼에 적용 */
+.btn-xs {
+  --cui-btn-padding-x: 7px;
+  --cui-btn-line-height: 22px;
+  --cui-btn-height: 23px;
+  --cui-btn-font-weight: 500;
+  --cui-btn-font-size: 12px;
+}
+
+.btn-primary {
+  --cui-btn-color: #ffffff;
+  --cui-btn-bg: #243ae7;
+  --cui-btn-border-color: #243ae7;
+  --cui-btn-hover-bg: #1c30c5;
+  --cui-btn-hover-border-color: #243ae7;
+  --cui-btn-active-color: #ffffff;
+  --cui-btn-active-bg: #0418a8;
+  --cui-btn-active-border-color: #243ae7;
+}
+.btn-outline-primary {
+  --cui-btn-color: #243ae7;
+  --cui-btn-border-color: #243ae7;
+  --cui-btn-hover-color: #243ae7;
+  --cui-btn-hover-bg: #e2edff;
+  --cui-btn-hover-border-color: #243ae7;
+  --cui-btn-active-color: #ffffff;
+  --cui-btn-active-bg: #243ae7;
+  --cui-btn-active-border-color: #243ae7;
+  --cui-btn-focus-shadow-rgb: 36, 58, 231;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 21, 0.125);
+  --cui-btn-disabled-color: #243ae7;
+  --cui-btn-disabled-bg: transparent;
+  --cui-gradient: none;
+
+  svg {
+    path {
+      fill: #243ae7;
+    }
+  }
+
+  &:hover {
+    --cui-btn-hover-bg: #e2edff;
+  }
+
+  &:active {
+    svg {
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.btn-outline-dark {
+  --cui-btn-color: #636f83;
+  --cui-btn-border-color: #636f83;
+  --cui-btn-hover-color: #000015;
+  --cui-btn-hover-bg: #e2e2e2;
+  --cui-btn-hover-border-color: #636f83;
+  --cui-btn-focus-shadow-rgb: 99, 111, 131;
+  --cui-btn-active-color: #ffffff;
+  --cui-btn-active-bg: #636f83;
+  --cui-btn-active-border-color: #636f83;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 21, 0.125);
+  --cui-btn-disabled-color: #636f83;
+}
+
+/* search-panel-btn */
+.btn-search-panel {
+  --cui-btn-bg: #ffffff;
+  --cui-btn-border-color: #ffffff;
+  --cui-btn-color: #243ae7;
+  --cui-btn-hover-color: #243ae7;
+  --cui-btn-hover-bg: #e2edff;
+  --cui-btn-hover-border-color: #ffffff;
+  --cui-btn-active-color: #ffffff;
+  --cui-btn-active-bg: #0418a8;
+  --cui-btn-active-border-color: #0418a8;
+  --cui-btn-focus-shadow-rgb: 36, 58, 231;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 21, 0.125);
+  --cui-btn-disabled-color: #243ae7;
+  --cui-btn-disabled-bg: transparent;
+  --cui-gradient: none;
+
+  svg {
+    path {
+      fill: #243ae7;
+    }
+  }
+
+  &:active {
+    svg {
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.btn-outline-light {
+  --cui-btn-color: #f0f4f7;
+  --cui-btn-border-color: #f0f4f7;
+  --cui-btn-hover-color: #243ae7;
+  --cui-btn-hover-bg: #e2edff;
+  --cui-btn-hover-border-color: #243ae7;
+  --cui-btn-active-color: #243ae7;
+  --cui-btn-active-bg: #ffffff;
+  --cui-btn-active-border-color: #ffffff;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 21, 0.125);
+  --cui-btn-disabled-color: #f0f4f7;
+  --cui-btn-disabled-bg: transparent;
+  --cui-gradient: none;
+}
+
+/* calendar */
+.calendar-cell {
+  --cui-calendar-cell-bg: #ebebeb;
+  --cui-calendar-cell-hover-bg: #ebebeb;
+  --cui-calendar-cell-selected-color: #243ae7;
+  --cui-calendar-cell-selected-bg: #e2edff;
+}
+
+.date-picker {
+  .btn-primary {
+    background-color: #ffffff;
+    border-color: #243ae7;
+    color: #0000bf;
+
+    &:hover {
+      background-color: #243ae7;
+      border-color: #243ae7;
+      color: #ffffff;
+    }
+
+    &:active {
+      background-color: #0000bf;
+      border-color: #0000bf;
+      color: #ffffff;
+    }
+
+    &.me-auto {
+      background-color: #ffffff;
+      border-color: #ffffff;
+      color: #4b70c0;
+
+      &:hover {
+        border-color: #587ed1;
+        background-color: #587ed1;
+        color: #ffffff;
+      }
+    }
+  }
+
+  /* cancel 버튼 */
+  .btn-ghost-primary {
+    background-color: #ffffff;
+    color: #444444;
+    border-color: #888888;
+
+    &:hover {
+      border-color: #888888;
+      background-color: #888888;
+      color: #ffffff;
+    }
+  }
+}

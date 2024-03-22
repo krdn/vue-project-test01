@@ -12,6 +12,7 @@
     }
   ],
   "compilerOptions": {
+    "isolatedModules": true,
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -26,9 +27,10 @@
     "useDefineForClassFields": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
+    "types": ["vite/client"],
+    // "types": [
+    //   "webpack-env"
+    // ],
     "paths": {
       "@/*": [
         "src/*"
@@ -42,12 +44,14 @@
     ]
   },
   "include": [
+    "env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.json",
     "tests/**/*.ts",
     "tests/**/*.tsx"
+
   ],
   "exclude": [
     "node_modules"

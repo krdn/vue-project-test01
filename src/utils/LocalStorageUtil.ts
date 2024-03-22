@@ -4,7 +4,7 @@ import {
   DEFAULT_DATE_RANGE,
   USE_MULTI_FACTOR_AUTHENTICATION
 } from '@/../constant/constant'
-import { ILocalStorageUtil } from '@/types/types'
+import type { ILocalStorageUtil } from '@/types/types'
 
 class LocalStorageUtil implements ILocalStorageUtil {
   constructor() {}

@@ -36,8 +36,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, 'src'),
+      // '$': path.resolve(__dirname, '/src'),
       // '@': fileURLToPath(new URL('./src', import.meta.url)),
+      'views1': path.resolve(__dirname, '/src/views'),
+      // '@@': fileURLToPath(new URL('/src', import.meta.url)),
       // `~` 기호를 사용하여 패키지를 가져오기 위한 별칭을 설정합니다.
       '~': path.resolve(__dirname, 'node_modules'), // 프로젝트의 src 디렉토리를 가리킵니다.
       // 추가적인 별칭 설정...

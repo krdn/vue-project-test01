@@ -20,9 +20,10 @@ const addRoute = (items: any, target: Array<RouteRecordRaw>) => {
         path: menu.to,
         name: menu.name,
         meta: { default: false, canView: menu.canView },
-        component: () => {
-          return import(`@/views/${menu.component}.vue`)
-          // return import(`./src/views/${menu.component}.vue`)
+        component: async () => {
+          // console.log('menu.component:', `@@/views/${menu.component}.vue`)
+          return import(`/src/views/${menu.component}.vue`)
+          // return await import(`@/views/${menu.component}.vue`)
 
         }
       } as any
@@ -133,6 +134,14 @@ console.log(import.meta.env.BASE_URL)
 const routes: Array<RouteRecordRaw> = createDefaultRouter()
 const router = createRouter({ history: createWebHashHistory(import.meta.env.BASE_URL), routes })
 
+/**
+ * 네비게이션 가드는 주로 탐색을 리디렉션하거나 취소하여, 탐색을 막는데 사용됩니다
+ * https://router.vuejs.kr/guide/advanced/navigation-guards
+ * @param to: 탐색 될 라우트 위치 객체
+ * @param from: 탐색 전 현재 라우트 위치 객체
+ * @param next: 다음 가드로 이동하기 위해 호출되는 함수 -> RFC를 문제(조심)
+ * https://router.vuejs.kr/guide/advanced/navigation-guards#optional-third-argument-next
+ */
 router.beforeEach(async (to, from, next) => {
   const navigation = window.performance.getEntriesByType(
     'navigation'
@@ -204,6 +213,7 @@ router.beforeEach(async (to, from, next) => {
         next({ name: 'Login' })
       }
     } else {
+      // TODO: Show alert message 
       alert('Not Permission')
 
       if (from.name) {

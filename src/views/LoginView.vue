@@ -345,33 +345,33 @@ export default class LoginView extends Base {
   }
 
   private addRoute(items: any, parentRouteName: RouteRecordName) {
-    // for (let menu of items) {
-    //   if (menu.to) {
-    //     const aaa = `@/views/${menu.component}.vue`;
+    for (let menu of items) {
+      if (menu.to) {
+        const aaa = `@/views/${menu.component}.vue`;
 
-    //     // const DashboardComponent = () => import(`@/views/${menu.component}.vue`);
+        // const DashboardComponent = () => import(`@/views/${menu.component}.vue`);
 
-    //     // const DashboardComponent = () => import(aaa);
-    //     // const DashboardComponent = () => import(`@/views/main/Dashboard.vue`);
+        // const DashboardComponent = () => import(aaa);
+        // const DashboardComponent = () => import(`@/views/main/Dashboard.vue`);
 
-    //     const route = {
-    //       path: menu.to,
-    //       name: menu.name,
-    //       meta: { default: false, canView: menu.canView },
-    //       component: () => import(`@/views/${menu.component}.vue`)
-    //       // component: () => import(`/src/views/${menu.component}.vue`)
-    //       // component: () => import(`@/views/main/Dashboard.vue`)
-    //     } as RouteRecordRaw;
+        const route = {
+          path: menu.to,
+          name: menu.name,
+          meta: { default: false, canView: menu.canView },
+          // component: () => import(`@/views/${menu.component}.vue`)
+          component: () => import(`/src/views/${menu.component}.vue`)
+          // component: () => import(`@/views/main/Dashboard.vue`)
+        } as RouteRecordRaw;
 
-    //     this.$router.addRoute(parentRouteName, route);
+        this.$router.addRoute(parentRouteName, route);
 
-    //     if (menu.items && menu.items.length > 0) {
-    //       route.children = [];
+        if (menu.items && menu.items.length > 0) {
+          route.children = [];
 
-    //       this.addRoute(menu.items, route.name as RouteRecordName);
-    //     }
-    //   }
-    // }
+          this.addRoute(menu.items, route.name as RouteRecordName);
+        }
+      }
+    }
   }
 }
 </script>
